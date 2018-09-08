@@ -1,0 +1,6 @@
+C:\Users\gokberkk\Desktop\Todo\Todo.Common\bin\Debug\Todo.Common.dll
+C:\Users\gokberkk\Desktop\Todo\Todo.Common\bin\Debug\Todo.Common.pdb
+C:\Users\gokberkk\Desktop\Todo\Todo.Common\obj\Debug\Todo.Common.csprojAssemblyReference.cache
+C:\Users\gokberkk\Desktop\Todo\Todo.Common\obj\Debug\Todo.Common.csproj.CoreCompileInputs.cache
+C:\Users\gokberkk\Desktop\Todo\Todo.Common\obj\Debug\Todo.Common.dll
+C:\Users\gokberkk\Desktop\Todo\Todo.Common\obj\Debug\Todo.Common.pdb

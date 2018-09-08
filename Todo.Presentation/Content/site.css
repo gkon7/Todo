@@ -1,0 +1,31 @@
+﻿body {
+    background: url('/Images/tile.png') repeat;
+}
+
+.new-todo-list {
+    height: 50px;
+    padding-left: 20px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.new-todo-item {
+    height: 78px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    padding-left: 20px;
+}
+
+.delete-todo-item {
+    font-size: 20px;
+    color: #a20000;
+    z-index: 9999;
+}
+
+.todo-item.completed {
+    background-color: #e6ffe6;
+}
+
+    .todo-item.completed h5 {
+        text-decoration: line-through;
+    }

@@ -1,0 +1,28 @@
+﻿@model IEnumerable<Todo.Common.Dto.DtoTodoItem>
+
+<div class="list-group">
+
+    @if (Model != null)
+    {
+        foreach (var item in Model)
+        {
+            <a data-tid="@item.Id" href="javascript:;" class="list-group-item list-group-item-action flex-column align-items-start toggle-item-status todo-item @(item.IsCompleted?"completed": "")">
+                <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1">@item.Title</h5>
+                    <small class="text-muted">
+                        <span data-tid="@item.Id" class="delete-todo-item">
+                            <i class="fas fa-times"></i>
+                        </span>
+                    </small>
+                </div>
+                <small class="text-muted ">@item.CreationDate.ToString("dd.MM.yyyy HH:mm")</small>
+            </a>
+        }
+    }
+
+
+    <div class="form-group">
+        <input type="text" class="form-control new-todo-item" placeholder="Yapılacak iş ekle" />
+    </div>
+
+</div>

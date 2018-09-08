@@ -1,0 +1,40 @@
+﻿@model Todo.Common.Dto.DtoLogin
+
+@{
+    Layout = null;
+    ViewBag.Title = "Giriş";
+}
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>@ViewBag.Title - Todo</title>
+
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet">
+    <link href="~/Content/login.css" rel="stylesheet">
+</head>
+
+<body class="text-center">
+    <form class="form-signin" method="post">
+        <img class="mb-4" src="~/Images/logo.png" alt="" width="150" height="150">
+        <label for="inputEmail" class="sr-only">E-posta adresi</label>
+
+        @Html.LabelFor(m => m.EMailAddress, "E-posta adresi", new { @class = "sr-only" })
+        @Html.TextBoxFor(m => m.EMailAddress, new { @class = "form-control", placeholder = "E-posta adresi", required = "required", autofocus = "autofocus", type = "email" })
+
+        @Html.LabelFor(m => m.Password, "Şifre", new { @class = "sr-only" })
+        @Html.PasswordFor(m => m.Password, new { @class = "form-control", placeholder = "Şifre", required = "required", autofocus = "autofocus" })
+
+        <div class="checkbox mb-3">
+            <label>
+                @Html.CheckBoxFor(m=>m.RememberMe) Beni hatırla
+            </label>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Giriş</button>
+        <p class="mt-5 mb-3 text-muted">&copy; 2018</p>
+    </form>
+</body>
+</html>

@@ -1,0 +1,17 @@
+﻿@model IEnumerable<Todo.Common.Dto.DtoTodoList>
+
+<div class="list-group">
+
+    @if (Model != null)
+    {
+        foreach (var item in Model)
+        {
+            <a href="#" data-lid="@item.Id" class="todo-list list-group-item list-group-item-action d-flex justify-content-between align-items-center">@item.Title <span class="badge badge-primary badge-pill">@item.UncompletedTodoItemCount</span></a>
+        }
+    }
+
+    <div class="form-group">
+        <input type="text" class="form-control new-todo-list" placeholder="Yeni liste ekle" />
+    </div>
+
+</div>

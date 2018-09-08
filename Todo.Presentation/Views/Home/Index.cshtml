@@ -1,0 +1,132 @@
+﻿<div class="row align-items-center">
+    <div class="col-sm-4">
+        <img src="~/Images/logo.png" alt="" width="150" height="150">
+    </div>
+    <div class="col-sm-8">
+        <span class="float-right align-middle">Hoşgeldiniz, @User.Identity.Name - <a href="@Url.Action("Logout", "Identity")">Çıkış</a></span>
+    </div>
+</div>
+
+<div class="row">
+
+    <div class="col-sm-4">
+
+        <div id="todo-lists"></div>
+
+    </div>
+
+    <div class="col-sm-8 ">
+
+        <div id="todo-items"></div>
+
+    </div>
+
+</div>
+
+<input type="hidden" id="selectedTodoList" name="selectedTodoList" value="" />
+
+
+@section scripts{
+
+    <script>
+
+        $(function () {
+
+            LoadTodoLists(false);
+
+        });
+
+        function LoadTodoLists(loadLastList) {
+            $('#todo-lists').load('/home/gettodolists', function () {
+                if (loadLastList === true) {
+
+                    BindEvents();
+
+                    $('#todo-lists a').last().trigger('click');
+                }
+                else {
+                    BindEvents();
+
+                    $('#todo-lists a').eq(0).trigger('click');
+                }
+            });
+        }
+
+        function LoadTodoItems(todoListId) {
+            $('#todo-items').load('/home/gettodoitems?todoListId=' + todoListId, function () {
+                BindEvents();
+            });
+        }
+
+        function BindEvents() {
+
+            $('a.todo-list').unbind();
+            $('a.todo-list').on('click', function () {
+
+                var todoListId = $(this).attr('data-lid');
+                $('#selectedTodoList').val(todoListId);
+
+                $('a.todo-list.active').removeClass('active');
+                $(this).addClass('active');
+
+                LoadTodoItems(todoListId);
+
+            });
+
+            $('.new-todo-list').unbind();
+            $('.new-todo-list').on('keyup', function (event) {
+                if (event.keyCode === 13) {
+
+                    var title = $(this).val();
+
+                    $.post('/home/addtodolist', { title: title }, function () {
+                        LoadTodoLists(true);
+                    });
+
+                }
+            });
+
+            $('.new-todo-item').unbind();
+            $('.new-todo-item').on('keyup', function (event) {
+                if (event.keyCode === 13) {
+
+                    var title = $(this).val();
+                    var selectedTodoList = $('#selectedTodoList').val();
+
+                    $.post('/home/addtodoitem',
+                        { title: title, todoListId: selectedTodoList }, function () {
+                            LoadTodoItems(selectedTodoList);
+                        });
+
+                }
+            });
+
+            $('.toggle-item-status').unbind();
+            $('.toggle-item-status').on('click', function () {
+
+                var dom = $(this);
+
+                todoItemId = $(this).attr('data-tid');
+
+                $.post('/home/toggletodoitemstatus',
+                    { todoItemId: todoItemId },
+                    function () {
+                        if (dom.hasClass('completed')) {
+                            dom.removeClass('completed');
+                        }
+                        else {
+                            dom.addClass('completed');
+                        }
+                    });
+            });
+
+            $('.delete-todo-item').on('click', function () {
+                alert();
+            });
+
+        }
+
+    </script>
+
+
+}

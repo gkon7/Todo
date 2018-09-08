@@ -1,0 +1,16 @@
+C:\Users\gokberkk\Desktop\Todo\Todo.Domain\bin\Debug\Todo.Domain.dll.config
+C:\Users\gokberkk\Desktop\Todo\Todo.Domain\bin\Debug\Todo.Domain.dll
+C:\Users\gokberkk\Desktop\Todo\Todo.Domain\bin\Debug\Todo.Domain.pdb
+C:\Users\gokberkk\Desktop\Todo\Todo.Domain\bin\Debug\EntityFramework.dll
+C:\Users\gokberkk\Desktop\Todo\Todo.Domain\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\gokberkk\Desktop\Todo\Todo.Domain\bin\Debug\Todo.Common.dll
+C:\Users\gokberkk\Desktop\Todo\Todo.Domain\bin\Debug\Todo.Common.pdb
+C:\Users\gokberkk\Desktop\Todo\Todo.Domain\bin\Debug\EntityFramework.xml
+C:\Users\gokberkk\Desktop\Todo\Todo.Domain\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\gokberkk\Desktop\Todo\Todo.Domain\obj\Debug\Todo.Domain.csprojAssemblyReference.cache
+C:\Users\gokberkk\Desktop\Todo\Todo.Domain\obj\Debug\Todo.Domain.Migrations.initialCreate.resources
+C:\Users\gokberkk\Desktop\Todo\Todo.Domain\obj\Debug\Todo.Domain.csproj.GenerateResource.cache
+C:\Users\gokberkk\Desktop\Todo\Todo.Domain\obj\Debug\Todo.Domain.csproj.CoreCompileInputs.cache
+C:\Users\gokberkk\Desktop\Todo\Todo.Domain\obj\Debug\Todo.Domain.csproj.CopyComplete
+C:\Users\gokberkk\Desktop\Todo\Todo.Domain\obj\Debug\Todo.Domain.dll
+C:\Users\gokberkk\Desktop\Todo\Todo.Domain\obj\Debug\Todo.Domain.pdb
