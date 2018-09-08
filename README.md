@@ -1,4 +1,4 @@
-# Todo
+![logo](https://raw.githubusercontent.com/gkon7/Todo/master/Todo.Presentation/Images/logo.png)
 
 This is a simple to-do application created on ASP.NET MVC platform.
 
@@ -14,3 +14,8 @@ Before run the project you must run database migrations to create databases and 
 
 E-mail address: user@site.com,
 Password: 123456
+
+# Screenshots
+
+![login-ss](https://raw.githubusercontent.com/gkon7/Todo/master/assets/login-ss.PNG)
+![app-ss](https://raw.githubusercontent.com/gkon7/Todo/master/assets/app-ss.PNG)
